@@ -20,14 +20,10 @@ namespace FundaApiTest.WrappingApi
         protected readonly HttpClient _httpClient;
         private readonly string _ApiKey;
 
-        public FundaApiWrapper(string apiKey)
+        public FundaApiWrapper(string apiKey, HttpClient httpClient)
         {
             _ApiKey = apiKey;
-            _httpClient = new HttpClient
-            {
-                DefaultRequestHeaders = { Accept = { MediaTypeWithQualityHeaderValue.Parse("application/xml") } },
-                BaseAddress = new Uri("http://partnerapi.funda.nl/feeds/Aanbod.svc/")
-            };
+            _httpClient = httpClient;
         }
 
         public async Task<LocatieFeed> GetProperties(int pageSize, int pageNumber, string location, string type, string[] filters, CancellationToken ct = default)

@@ -7,6 +7,8 @@ using AutofacSerilogIntegration;
 using Microsoft.Extensions.Logging;
 using Autofac.Extensions.DependencyInjection;
 using FundaApiTest.WrappingApi;
+using System.Net.Http;
+using System.Net.Http.Headers;
 
 namespace FundaApiTest
 {
@@ -32,7 +34,8 @@ namespace FundaApiTest
             builder.Populate(services);
 
             builder.RegisterType<FundaApiWrapper>().As<IWrapFundaApi>()
-                .WithParameter("apiKey", "ac1b0b1572524640a0ecc54de453ea9f");
+                .WithParameter("apiKey", "ac1b0b1572524640a0ecc54de453ea9f")
+                .WithParameter("httpClient", new HttpClient { DefaultRequestHeaders = { Accept = { MediaTypeWithQualityHeaderValue.Parse("application/xml") } }, BaseAddress = new Uri("http://partnerapi.funda.nl/feeds/Aanbod.svc/") });
 
             return new AutofacServiceProvider(builder.Build());
         }

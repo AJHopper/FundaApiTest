@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.30204.135
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FundaApiTest", "FundaApiTest\FundaApiTest.csproj", "{C043B487-421C-4AC6-A03D-E380C1D026E8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FundaApiTests", "FundaApiTests\FundaApiTests.csproj", "{FCDEA2DC-101B-4597-A284-7985DEB44F36}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{C043B487-421C-4AC6-A03D-E380C1D026E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C043B487-421C-4AC6-A03D-E380C1D026E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C043B487-421C-4AC6-A03D-E380C1D026E8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FCDEA2DC-101B-4597-A284-7985DEB44F36}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FCDEA2DC-101B-4597-A284-7985DEB44F36}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FCDEA2DC-101B-4597-A284-7985DEB44F36}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FCDEA2DC-101B-4597-A284-7985DEB44F36}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
